@@ -1,2 +1,4 @@
-package frogs;public class DumpyTreeFrog {
+package frogs;
+
+public class DumpyTreeFrog extends Frog{
 }

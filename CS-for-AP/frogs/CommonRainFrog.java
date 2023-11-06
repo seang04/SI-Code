@@ -1,2 +1,6 @@
-package frogs;public class CommonRainFrog {
+package frogs;
+
+public class CommonRainFrog extends Frog{
+
+    
 }

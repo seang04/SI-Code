@@ -1,2 +1,4 @@
-package frogs;public class TomatoFrog {
+package frogs;
+
+public class TomatoFrog extends Frog{
 }
