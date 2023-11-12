@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/networking-example" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tree-traversal" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/debug-hunt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/debugging-example" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
