@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,11 +48,13 @@ public class MergeSort {
         inputValues.add(i);
     }
 
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
         MergeSort sort = new MergeSort();
         System.out.println("Enter list of integer values to be sorted.");
-        Scanner stdin = new Scanner(System.in);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String line = reader.readLine();
+        Scanner stdin = new Scanner(line);
 
         while(stdin.hasNextInt())
         {

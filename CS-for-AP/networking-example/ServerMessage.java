@@ -11,11 +11,13 @@ public class ServerMessage {
     @Override
     public String toString()
     {
-        return "[" + user.getInetAddress() + ":" + user.getPort() + "]" + message; 
+        if(this.user == null) return "[ADMIN] " + message; 
+        return "[" + user.getInetAddress() + ":" + user.getPort() + "] " + message; 
     }
 
     public boolean checkSameUser(Socket other)
     {
+        if(other == null || user == null) return user == other; 
         return user.equals(other); 
     }
 }

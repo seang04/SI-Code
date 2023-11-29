@@ -33,7 +33,7 @@ public class Server {
     {
         for(User i : users.subList(0, users.size() - 1))
         {
-            if(i.getUsername().equals(user))
+            if(i.getUsername() != null && i.getUsername().equals(user))
             {
                 try {
                     i.writeTo(message);
@@ -68,7 +68,7 @@ public class Server {
 
     public static void main(String[] args)
     {
-        Server server = new Server(5000);
+        Server server = new Server(5001);
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         try
         {

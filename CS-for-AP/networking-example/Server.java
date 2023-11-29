@@ -1,8 +1,10 @@
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.*;
 import java.util.LinkedList;
 import java.util.List;
@@ -48,7 +50,15 @@ public class Server {
             }
             catch(IOException e)
             {
-                System.err.println(e);
+                connections.remove(socket);
+                try
+                {
+                    socket.close();
+                }
+                catch(IOException ex)
+                {
+                    System.err.println(e);
+                }
             }
         }
     }
@@ -57,5 +67,20 @@ public class Server {
     {
  
         Server server = new Server(5000);
+        BufferedReader consoleIn = new BufferedReader(new InputStreamReader(System.in));
+        try 
+        { 
+            String line = consoleIn.readLine(); 
+            while(!line.equals("/exit"))
+            {
+                ServerMessage msg = new ServerMessage(null, line);
+                server.messageConnections(msg);
+                line = consoleIn.readLine();
+            }
+        }
+        catch(IOException e)
+        {
+            System.err.println(e);
+        }
     }
 }

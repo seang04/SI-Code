@@ -104,9 +104,14 @@ public class ClientSide {
  
     public static void main(String[] args)
     {
+        if(args.length != 1)
+        {
+            System.err.println("Usage: java ClientSide [hostname]");
+            return; 
+        }
  
         ClientSide client
-            = new ClientSide("127.0.0.1", 5000);
+            = new ClientSide(args[0], 5000);
     }
 }
 

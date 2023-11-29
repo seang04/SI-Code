@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/tree-traversal" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/debug-hunt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/debugging-example" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/gui-example" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mvn-activity" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
